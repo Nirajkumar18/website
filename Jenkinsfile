@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh 'docker run -d -p 8080:80 --name webapp_test webapp'
+                    sh 'docker run -d -p 8081:80 --name webapp_test webapp'
                     sh 'docker exec webapp_test /path/to/test/script.sh'
                 }
             }
