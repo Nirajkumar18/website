@@ -1,2 +1,4 @@
 FROM nginx:alpine
-COPY . /usr/share/nginx/html
+WORKDIR /app
+COPY . /app
+RUN apt-get update
